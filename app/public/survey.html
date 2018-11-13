@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Survey</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+            <style>
+                    * {
+                        box-sizing: border-box;
+                        font-family: Arial, Helvetica, sans-serif;
+                    }
+        
+                    h1 {
+                        font-size: 32px;
+                        font-weight: normal;
+                    }
+        
+                    h2 {
+                        font-size: 24px;
+                        font-weight: bold;
+                        margin: 0.25em 0px;
+                    }
+
+                    h3 {
+                        font-size: 18px;
+                        font-weight: normal;
+                        margin: 0.25em 0px;
+                    }
+
+                    hr {
+                        margin: 20px 0px;
+                    }
+
+                    input {
+                        font-size: 24px;
+                        width: 100%;
+                    }
+
+                    select {
+                        font-size: 18px;
+                        margin: 0.25em 0px 1em 0px;
+                    }
+        
+                    #container {
+                        max-width: 960px;
+                        margin: 0px auto;
+                        padding: 0px 40px;
+                    }
+
+                    #submit-btn {
+                        width: 100%;
+                        font-size: 24px;
+                        color: #fff;
+                        background: #48f;
+                        border-radius: 10px;
+                        height: 2em;
+                        margin: 1em 0px;
+                    }
+            </style>
+    </head>
+    <body>
+        <div id="container">
+            <h1>Survey Questions</h1>
+            <hr>
+            <h2>About You</h2>
+            <h3>Name (Required)</h3>
+            <input type="text" id="name">
+            <h3>Link to Photo Image (Required)</h3>
+            <input type="text" id="photo-link">
+
+            <hr>
+
+            <h2>Question 1</h2>
+            <h3>Your mind is always buzzing with unexplored ideas and plans.</h3>
+            <select id="question-1">
+                <option value="" selected disabled>Select an Option</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <h2>Question 2</h2>
+            <h3>Generally speaking, you rely more on your experience than your imagination.</h3>
+            <select id="question-2">
+                <option value="" selected disabled>Select an Option</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <h2>Question 3</h2>
+            <h3>You find it easy to stay relaxed and focused even when there is some pressure.</h3>
+            <select id="question-3">
+                <option value="" selected disabled>Select an Option</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <h2>Question 4</h2>
+            <h3>You rarely do something just out of sheer curiosity.</h3>
+            <select id="question-4">
+                <option value="" selected disabled>Select an Option</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <h2>Question 5</h2>
+            <h3>People can rarely upset you.</h3>
+            <select id="question-5">
+                <option value="" selected disabled>Select an Option</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <h2>Question 6</h2>
+            <h3>It is often difficult for you to relate to other people’s feelings.</h3>
+            <select id="question-6">
+                <option value="" selected disabled>Select an Option</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <h2>Question 7</h2>
+            <h3>In a discussion, truth should be more important than people’s sensitivities.</h3>
+            <select id="question-7">
+                <option value="" selected disabled>Select an Option</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <h2>Question 8</h2>
+            <h3>You rarely get carried away by fantasies and ideas.</h3>
+            <select id="question-8">
+                <option value="" selected disabled>Select an Option</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <h2>Question 9</h2>
+            <h3>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h3>
+            <select id="question-9">
+                <option value="" selected disabled>Select an Option</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <h2>Question 10</h2>
+            <h3>You feel more energetic after spending time with a group of people.</h3>
+            <select id="question-10">
+                <option value="" selected disabled>Select an Option</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <button id="submit-btn">Submit</button>
+
+            <p><a href="#">API Friends List</a> | <a href="#">GitHub Repo</a></p>
+
+        </div>
+    </body>
+</html>
