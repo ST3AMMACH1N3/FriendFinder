@@ -1,11 +1,11 @@
-const path = require('path');
-
-let router = function(req, res) {
-    if (req.path === "/survey") {
+let router = function(app, path) {
+    app.get("/survey", (req, res) => {
         res.sendFile(path.join(__dirname, "../public/survey.html"));
-    } else {
-        res.sendFile(path.join(__dirname, "../public/home.html"))
-    }
+    });
+    
+    app.get("*", (req, res) => {
+        res.sendFile(path.join(__dirname, "../public/home.html"));
+    });
 }
 
 module.exports = router;

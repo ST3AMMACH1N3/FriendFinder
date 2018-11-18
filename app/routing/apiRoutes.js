@@ -22,9 +22,9 @@ let router = function(app, path, fs) {
             });
             res.json(array[index]);
             array.push(req.body);
-            // fs.writeFile(path.join(__dirname, "../data/friends.js"), JSON.stringify(array, null, 2), 'utf8', err => {
-            //     if (err) throw err;
-            // });
+            fs.writeFile(path.join(__dirname, "../data/friends.js"), JSON.stringify(array, null, 2), 'utf8', err => {
+                if (err) throw err;
+            });
         });
         
     });
