@@ -262,7 +262,6 @@
                     }
 
                     $.post("/api/friends", person, data => {
-                        data = JSON.parse(data);
                         $("#modal-name").text(data.name);
                         $("#modal-image").attr("src", data.photo);
                         $("#modal-overlay").show();
