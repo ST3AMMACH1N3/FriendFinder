@@ -27,10 +27,10 @@ let router = function(req, res) {
             });
 
             array.push(req.body);
-            fs.writeFile(path.join(__dirname, "../data/friends.js"), JSON.stringify(array, null, 2), 'utf8', err => {
-                if (err) throw err;
-                res.end(JSON.stringify(array[index]));
-            });
+            // fs.writeFile(path.join(__dirname, "../data/friends.js"), JSON.stringify(array, null, 2), 'utf8', err => {
+            //     if (err) throw err;
+            //     res.end(JSON.stringify(array[index]));
+            // });
             res.end(JSON.stringify(array[index]));
         }
     });

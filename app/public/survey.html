@@ -243,25 +243,22 @@
                         photo: $("#photo-link").val(),
                         scores: []
                     };
+
                     let missingInfo = false;
-                    if (person.name.length < 1) {
-                        $("#name").addClass("not-filled");
-                        missingInfo = true;
-                    }
-                    if (person.photo.length < 1) {
-                        $("#photo-link").addClass("not-filled");
-                        missingInfo = true;
-                    }
-                    for(let obj of $(".question")) {
-                        if (obj.value.length > 0) {
-                            person.scores.push(parseInt(obj.value));
-                        } else {
-                            $(obj).addClass("not-filled");
+
+                    $(".required").each((index, element) => {
+                        if ($(element).val() === null || $(element).val().length < 1) {
+                            $(element).addClass("not-filled");
                             missingInfo = true;
+                            return;
                         }
-                    }
+                        if ($(element).hasClass("question")) {
+                            person.scores.push($(element).val());
+                        }
+                    });
+
                     if (missingInfo) {
-                        return
+                        return;
                     }
 
                     $.post("/api/friends", person, data => {
@@ -269,6 +266,9 @@
                         $("#modal-name").text(data.name);
                         $("#modal-image").attr("src", data.photo);
                         $("#modal-overlay").show();
+                        $(".required").each((index, element) => {
+                            $(element).val("");
+                        })
                     });
                     
                 });
