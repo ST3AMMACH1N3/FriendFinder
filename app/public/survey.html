@@ -65,7 +65,7 @@
                 height: 400px;
                 max-height: 100%;
                 transform: translate(-50%, -50%);
-                background: #f00;
+                background: #fff;
                 overflow: auto;
                 padding: 25px;
             }
@@ -230,8 +230,6 @@
             </div>
         </div>
 
-        
-
         <script
         src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -245,24 +243,28 @@
                         photo: $("#photo-link").val(),
                         scores: []
                     };
+                    let missingInfo = false;
                     if (person.name.length < 1) {
                         $("#name").addClass("not-filled");
+                        missingInfo = true;
                     }
                     if (person.photo.length < 1) {
                         $("#photo-link").addClass("not-filled");
+                        missingInfo = true;
                     }
                     for(let obj of $(".question")) {
                         if (obj.value.length > 0) {
                             person.scores.push(parseInt(obj.value));
                         } else {
                             $(obj).addClass("not-filled");
+                            missingInfo = true;
                         }
                     }
-                    if (person.scores.length < $(".question").length) {
+                    if (missingInfo) {
                         return
                     }
 
-                    $.post("/api/friends", person, (data) => {
+                    $.post("/api/friends", person, data => {
                         data = JSON.parse(data);
                         $("#modal-name").text(data.name);
                         $("#modal-image").attr("src", data.photo);
