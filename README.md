@@ -1,7 +1,7 @@
-# [FriendFinder](#)
-[FriendFinder](#) is web app that allows you to answer questions about yourself to find a new friend.
+# [FriendFinder](https://bh-friendfinder.herokuapp.com/)
+[FriendFinder](https://bh-friendfinder.herokuapp.com/) is web app that allows you to answer questions about yourself to find a new friend.
 ## Getting Started
-Go to [FriendFinder](#) to find the app.
+Go to [FriendFinder](https://bh-friendfinder.herokuapp.com/) to find the app.
  - Click on the take survey button to take the survey and find a friend.
 
  - Click on the API link to see all of the current friends available along with their answers.
@@ -14,4 +14,4 @@ Go to [FriendFinder](#) to find the app.
  - **Ben Houston**
 
  ## Purpose
-[FriendFinder](#) was made for the *University Of Central Florida - Coding Bootcamp* and is meant to demonstrate our proficiency with node and express.
+[FriendFinder](https://bh-friendfinder.herokuapp.com/) was made for the *University Of Central Florida - Coding Bootcamp* and is meant to demonstrate our proficiency with node and express.
